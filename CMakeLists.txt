@@ -5,4 +5,7 @@ include_directories(include)
 
 file(GLOB SOURCES "src/*.cpp")
 
-add_executable(animals ${SOURCES})
+add_library(testAnimals SHARED ${SOURCES})
+
+# add_executable(animals ${SOURCES})
+install(TARGETS testAnimals DESTINATION $ENV{HOME})
